@@ -18,15 +18,13 @@ body {
 }
 
 .header .header__link {
-  font-family: Fantasy, cursive;
+  font-family: fantasy, cursive;
 }
 
-@media (max-width:768px) {
-
+@media (max-width: 768px) {
   .header {
     text-align: center;
   }
-
 }
 
 .main {
@@ -35,7 +33,7 @@ body {
   margin: 0 auto 0;
 }
 
-.new__task {
+.task {
   width: 56%;
   display: inline-block;
   flex-grow: 1;
@@ -51,11 +49,11 @@ ul {
 }
 
 li,
- h3 {
+h3 {
   list-style: none;
 }
 
-input, 
+input,
 button {
   outline: none;
 }
@@ -71,12 +69,12 @@ button {
 }
 
 button:hover {
-  color: #3a3A3a;
+  color: #3a3a3a;
 }
 
 /* Heading */
 
-h3, 
+h3,
 label[for="new__task"] {
   color: #333;
   font-weight: 700;
@@ -93,8 +91,8 @@ input[type="text"] {
   line-height: 18px;
   height: 21px;
   padding: 0 9px;
-  border: 1px solid #dDd;
-  background: #FFF;
+  border: 1px solid #ddd;
+  background: #fff;
   border-radius: 6px;
   font-family: Lato, sans-serif;
   color: #888;
@@ -111,17 +109,18 @@ label[for="new__task"] {
   margin: 0 0 20px;
 }
 
-input#new__task {
+#new__task {
   width: 318px;
 }
 
-p>button:hover {
-  color: #0FC57C;
+p > button:hover {
+  color: #0fc57c;
 }
 
 /* Task list */
 
-li {
+.show__mode,
+.edit__mode {
   overflow: hidden;
   padding: 20px 0;
   border-bottom: 1px solid #eee;
@@ -130,27 +129,27 @@ li {
   align-items: center;
 }
 
-li>* {
+li > * {
   vertical-align: middle;
 }
 
-li>input[type="checkbox"] {
+li > input[type="checkbox"] {
   margin: 0 10px;
 }
 
-li>label {
+li > .task {
   padding-left: 10px;
   box-sizing: border-box;
   font-size: 18px;
   width: 226px;
 }
 
-li>input[type="text"] {
+li > input[type="text"] {
   width: 226px;
 }
 
-li>button.task__delete-btn:hover {
-  color: #CF2323;
+li > button.task__delete-btn:hover {
+  color: #cf2323;
 }
 
 button.task__delete-btn img {
@@ -165,22 +164,22 @@ button.task__delete-btn img:hover {
 
 /* Completed */
 
-#completed-tasks label {
+#completed__tasks .task {
   text-decoration: line-through;
   color: #888;
 }
 
 /* Edit Task */
 
-ul li input[type=text] {
+.show__mode input[type="text"] {
   display: none;
 }
 
-ul li.editMode input[type=text] {
+.edit__mode input[type="text"] {
   display: inline-block;
   width: 224px;
 }
 
-ul li.editMode label {
+.edit__mode .task {
   display: none;
 }
