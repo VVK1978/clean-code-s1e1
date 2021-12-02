@@ -164,22 +164,22 @@ button.task__delete-btn img:hover {
 
 /* Completed */
 
-.show__mode .task {
+#completed__tasks .task {
   text-decoration: line-through;
   color: #888;
 }
 
 /* Edit Task */
 
-ul li input[type="text"] {
+.show__mode input[type="text"] {
   display: none;
 }
 
-ul li.editMode input[type="text"] {
+.edit__mode input[type="text"] {
   display: inline-block;
   width: 224px;
 }
 
-ul li.editMode label {
+.edit__mode .task {
   display: none;
 }
